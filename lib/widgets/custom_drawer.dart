@@ -15,6 +15,9 @@ class CustomDrawer extends StatelessWidget {
               image: Assets.imagesAvatar1,
               title: 'Lekan Okeowo',
               subtitle: 'demo@gmail.com'),
+          SizedBox(
+            height: 8,
+          ),
         ],
       ),
     );
