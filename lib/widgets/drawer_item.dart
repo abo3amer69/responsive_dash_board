@@ -4,9 +4,10 @@ import 'package:responsive_dash_board/model/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app-style.dart';
 
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({super.key, required this.draweritemModel});
+  const DrawerItem({super.key, required this.draweritemModel, required this.isActive});
 
   final DrawerItemModel draweritemModel;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
