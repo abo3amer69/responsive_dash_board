@@ -5,6 +5,7 @@ import 'package:responsive_dash_board/widgets/custom_text_field.dart';
 import 'package:responsive_dash_board/widgets/latest_transaction.dart';
 import 'package:responsive_dash_board/widgets/latest_transaction_list_view.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_header.dart';
+import 'package:responsive_dash_board/widgets/title_text_field.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -16,10 +17,14 @@ class QuickInvoice extends StatelessWidget {
         children: [
           QuickInvoiceHeader(),
           LatestTransacion(),
-          Divider(height: 48,),
-          CustomTextField(),
+          Divider(
+            height: 48,
+          ),
+         
         ],
       ),
     );
   }
 }
+
+
