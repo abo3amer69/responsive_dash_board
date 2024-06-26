@@ -4,8 +4,10 @@ import 'package:responsive_dash_board/model/user_info_model.dart';
 import 'package:responsive_dash_board/utils/app-style.dart';
 
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile(
-      {super.key, required this.userInfoModel,});
+  const UserInfoListTile({
+    super.key,
+    required this.userInfoModel,
+  });
 
   final UserInfoModel userInfoModel;
 
@@ -16,15 +18,22 @@ class UserInfoListTile extends StatelessWidget {
       elevation: 0,
       child: Center(
         child: ListTile(
-          leading: SvgPicture.asset(
-            userInfoModel.image),
-          title: Text(
-            userInfoModel.title,
-            style: AppStyles.styleSemiBold16(context),
+          leading: SvgPicture.asset(userInfoModel.image),
+          title: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              userInfoModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
-          subtitle: Text(
-            userInfoModel.subtitle,
-            style: AppStyles.styleRegular12(context),
+          subtitle: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              userInfoModel.subtitle,
+              style: AppStyles.styleRegular12(context),
+            ),
           ),
         ),
       ),
