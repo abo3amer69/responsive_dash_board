@@ -29,32 +29,35 @@ class DashBoardDesktopLayout extends StatelessWidget {
               SliverFillRemaining(
                 hasScrollBody: false,
                 child: Row(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Padding(
-                  padding: EdgeInsets.only(top: 40),
-                  child: AllExpensesAndQuickInvoiceSection(),
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40),
+                        child: AllExpensesAndQuickInvoiceSection(),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 24,
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 40,
+                          ),
+                          MyCardsTransactionHistorySection(),
+                          SizedBox(
+                            height: 24,
+                          ),
+                          Expanded(
+                            child: IncomeSection(),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              SizedBox(
-                width: 24,
-              ),
-              Expanded(
-                  child: Column(
-                children: [
-                  SizedBox(
-                    height: 40,
-                  ),
-                  MyCardsTransactionHistorySection(),
-                  SizedBox(
-                    height: 24,
-                  ),
-                  Expanded(child: IncomeSection()),
-                ],
-              )),
-            ],
-          ),
               )
             ],
           ),
